@@ -25,10 +25,10 @@
                 <form action="/store-todos" method="post">
                     @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="name">
+                        <input type="text" class="form-control" placeholder="Name" value="{{old('name')}}" name="name">
                     </div>
                     <div class="form-group">
-                        <textarea name="description" placeholder="Description" cols="5" rows="5" class="form-control"></textarea>
+                    <textarea name="description" placeholder="Description" cols="5" rows="5" class="form-control">{{old('description')}}</textarea>
                     </div>
 
                     <div class="form-group text-center">
